@@ -1,0 +1,46 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+###
+
+
+GET http://127.0.0.1:8000/contributions?order_by=owner
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?order_by=startTime
+Accept: application/json
+###
+GET http://127.0.0.1:8000/contributions?id=5
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?title=news
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?description=space
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?startBefore=2024-05-27T15:00:00Z&description=space
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?owner=Sports&match=any&owner=Cosmos
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?owner=LiveMusic&title=jazz&match=any
+Accept: application/json
+###
+
+GET http://127.0.0.1:8000/contributions?description=sport&match=any&skip=1
+Accept: application/json
+###
+
+
+GET http://127.0.0.1:8000/contributions/?skip=5&limit=5
+Accept: application/json
+###
